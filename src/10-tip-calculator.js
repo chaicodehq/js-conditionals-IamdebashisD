@@ -31,4 +31,52 @@
  */
 export function calculateTip(billAmount, serviceRating) {
   // Your code here
+  if ( billAmount <= 0 ) return null
+  if ( 
+    serviceRating !== 1 &&
+    serviceRating !== 2 && 
+    serviceRating !== 3 &&
+    serviceRating !== 4 && 
+    serviceRating !== 5 
+  ) return null
+
+  const billObject = {}
+
+  if (serviceRating === 1) {
+    const tipAmount = billAmount * 0.05
+
+    billObject.tipPercentage = 5
+    billObject.tipAmount = Number(tipAmount.toFixed(2))
+    billObject.totalAmount = Number((billAmount + tipAmount).toFixed(2))
+  } 
+  if (serviceRating === 2){
+    const tipAmount = billAmount * 0.10
+
+    billObject.tipPercentage = 0.10 * 100
+    billObject.tipAmount = Number(tipAmount.toFixed(2))
+    billObject.totalAmount = Number((billAmount + tipAmount).toFixed(2))
+  } 
+  if (serviceRating === 3){
+    const tipAmount = billAmount * 0.15
+
+    billObject.tipPercentage = 0.15 * 100
+    billObject.tipAmount = Number(tipAmount.toFixed(2))
+    billObject.totalAmount = Number((billAmount + tipAmount).toFixed(2))
+  } 
+  if (serviceRating === 4){
+    const tipAmount = billAmount * 0.20
+
+    billObject.tipPercentage = 0.20 * 100
+    billObject.tipAmount = Number(tipAmount.toFixed(2))
+    billObject.totalAmount = Number((billAmount + tipAmount).toFixed(2))
+  } 
+  if (serviceRating === 5){
+    const tipAmount = billAmount * 0.25
+
+    billObject.tipPercentage = 0.25 * 100
+    billObject.tipAmount = Number(tipAmount.toFixed(2))
+    billObject.totalAmount = Number((billAmount + tipAmount).toFixed(2))
+  } 
+
+  return billObject
 }
