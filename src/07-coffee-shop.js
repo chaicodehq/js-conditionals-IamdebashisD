@@ -52,8 +52,3 @@ export function calculateCoffeePrice(size, type, extras = {}) {
   return totalPrice
 }
 
-
-
-//          Large mocha + whipped cream + extra shot 
-//          5.00 + 2.00 + 0.50 + 0.75 = 7.00 + 1.25 = 8.25 
-
